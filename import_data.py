@@ -7,11 +7,8 @@ import matplotlib.pyplot as plt
 
 training_data = datasets.QMNIST(
     root="data",
-    train=True,
-    download=True,
-    transform=ToTensor(),
+    what="train",
+    download=True
 )
 
-image_tensor, label_tensor = training_data[0]
-plt.imshow(image_tensor.numpy()[0],cmap='gray')
-plt.savefig("test")
+print(len(training_data))
