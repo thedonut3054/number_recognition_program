@@ -16,7 +16,7 @@ for y, axi in enumerate(ax.flat):
         image_tensor, label_tensor = training_data[x]
         axi.imshow(image_tensor, cmap='gray')
         axi.axis('off')
-        print("Image {z}/900 loaded")
+        print(f"Image {z}/900 loaded")
         z += 1
 
 plt.savefig("large_test")
