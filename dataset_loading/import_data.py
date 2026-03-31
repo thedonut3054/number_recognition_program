@@ -4,6 +4,9 @@ from torch.utils.data import DataLoader
 from torchvision import datasets
 from torchvision.transforms import ToTensor
 import matplotlib.pyplot as plt
+import random
+
+print("Importing data")
 
 training_data = datasets.QMNIST(
     root="data",
@@ -11,4 +14,4 @@ training_data = datasets.QMNIST(
     download=True
 )
 
-print(len(training_data))
+print(f"Succesfuly imported {len(training_data)} training images")
