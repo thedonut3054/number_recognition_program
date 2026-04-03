@@ -21,6 +21,7 @@ class NeuralNetwork(nn.Module):
             nn.ReLU(),
             nn.Linear(196, 10),
         )
+        self.device = device
 
     def forward(self, x):
         x = self.flatten(x)
@@ -28,4 +29,5 @@ class NeuralNetwork(nn.Module):
         return logits
 
 model = NeuralNetwork()
+model.to(device)
 print(model)

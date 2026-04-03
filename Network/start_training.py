@@ -10,13 +10,11 @@ from Network.test import test_loop
 from Network.training import train_loop
 
 learning_rate = 1e-2
-batch_size = 60
-epochs = 10
+epochs = 50
 
 loss_fn = torch.nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
-
-epochs = 10
+print(epochs)
 for t in range(epochs):
     print(f"Epoch {t+1}\n-------------------------------")
     train_loop(training_dataloader, model, loss_fn, optimizer)

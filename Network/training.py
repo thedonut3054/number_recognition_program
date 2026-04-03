@@ -10,7 +10,7 @@ def train_loop(dataloader, model, loss_fn, optimizer):
     # Unnecessary in this situation but added for best practices
     model.train()
     for batch, (X, y) in enumerate(dataloader):
-        # Compute prediction and loss
+        X, y = X.to(model.device), y.to(model.device)
         pred = model(X)
         loss = loss_fn(pred, y)
 
