@@ -13,13 +13,13 @@ training_data = datasets.QMNIST(
     download=True,
     transform=v2.Compose([v2.ToImage(), v2.ToDtype(torch.float32, scale=True)])
 )
-training_dataloader = DataLoader(training_data, batch_size=60, shuffle=True)
+training_dataloader = DataLoader(training_data, batch_size=20, shuffle=True)
 test_data = datasets.QMNIST(
     root="data",
     what="test",
     download=True,
     transform=v2.Compose([v2.ToImage(), v2.ToDtype(torch.float32, scale=True)])
 )
-test_dataloader = DataLoader(test_data, batch_size=60, shuffle=True)
+test_dataloader = DataLoader(test_data, batch_size=20, shuffle=True)
 print(training_dataloader)
 print(f"Succesfuly imported {len(training_data)} training images")
