@@ -14,7 +14,7 @@ for y, axi in enumerate(ax.flat):
     for i in range(0, 30):
         x = random.randint(0, 59999)
         image_tensor, label_tensor = training_data[x]
-        axi.imshow(image_tensor, cmap='gray')
+        axi.imshow(image_tensor.permute(1, 2, 0).detach().cpu(), cmap='gray')
         axi.axis('off')
         print(f"Image {z}/900 loaded")
         z += 1

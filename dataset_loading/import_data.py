@@ -11,7 +11,7 @@ training_data = datasets.QMNIST(
     root="data",
     what="train",
     download=True,
-    transform=v2.Compose([v2.ToImage(), v2.ToDtype(torch.float32, scale=True)])
+    transform=v2.Compose([v2.ToImage(), v2.ToDtype(torch.float32, scale=True), v2.Lambda(lambda x: torch.where(x > 0, 1.0, 0.0))])
 )
 training_dataloader = DataLoader(training_data, batch_size=20, shuffle=True)
 test_data = datasets.QMNIST(
