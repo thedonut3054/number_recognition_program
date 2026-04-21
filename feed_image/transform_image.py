@@ -5,7 +5,7 @@ import torchvision.io as io
 import matplotlib.pyplot as plt
 from torchvision.transforms.v2 import InterpolationMode
 
-image = io.read_image("/workspaces/number_recognition_program/feed_image/image_to_scan/number.jpg")
+image = io.read_image("/workspaces/number_recognition_program/feed_image/image_to_scan/scan.jpg")
 original_size = (216, 216)
 pixel_size = 28
 
