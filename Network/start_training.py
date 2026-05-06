@@ -1,11 +1,10 @@
 import torch
-import pandas as pd
 from torch.utils.data import DataLoader
 from torchvision import datasets
 import torchvision.transforms.v2 as v2
 from Network.Network_definition import model
-from dataset_loading.import_data import training_dataloader
-from dataset_loading.import_data import test_dataloader
+from dataset_loading.import_EMNIST import training_dataloader
+from dataset_loading.import_EMNIST import test_dataloader
 from Network.test import test_loop
 from Network.training import train_loop
 

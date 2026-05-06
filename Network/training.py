@@ -1,5 +1,4 @@
 import torch
-import pandas as pd
 from torch.utils.data import DataLoader
 from torchvision import datasets
 import torchvision.transforms.v2 as v2
